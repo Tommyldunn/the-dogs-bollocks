@@ -111,11 +111,11 @@
       }
       &::after {
         position: absolute;
-        top: -25%;
+        top: 0;
         right: 0;
         display: block;
         height: 100%;
-        padding: 7px 33px 0;
+        padding: 0 33px 0;
         clip: rect(0, 1000px, 100px, 500px);
         color: $white;
         white-space: nowrap;
@@ -123,8 +123,8 @@
         background-color: $white;
         transition: clip .7s cubic-bezier(.075, .82, .165, 1),color .5s ease-in .1s;
         @media (min-width: 48em) {
-          top: -21%;
-          padding-top: 13px;
+          // top: -21%;
+          // padding-top: 13px;
         }
       }
     }
@@ -196,26 +196,26 @@
         }
       }
       &::after {
-        position: absolute;
-        top: -25%;
-        right: 0;
-        display: block;
-        height: 100%;
-        padding: 7px 33px 0;
-        clip: rect(0, 1000px, 100px, 500px);
-        color: $white;
-        white-space: nowrap;
-        content: attr(data-item);
-        background-color: $white;
-        -webkit-transition: clip .7s cubic-bezier(.075, .82, .165, 1),color .5s ease-in;
-           -moz-transition: clip .7s cubic-bezier(.075, .82, .165, 1),color .5s ease-in .1s;
-             -o-transition: clip .7s cubic-bezier(.075, .82, .165, 1),color .5s ease-in .1s;
-                transition: clip .7s cubic-bezier(.075, .82, .165, 1),color .5s ease-in .1s;
-        -webkit-transition-delay: 0s,.1s;
-        @media (min-width: 48em) {
-          top: -21%;
-          padding-top: 13px;
-        }
+        // position: absolute;
+        // top: -25%;
+        // right: 0;
+        // display: block;
+        // height: 100%;
+        // padding: 7px 33px 0;
+        // clip: rect(0, 1000px, 100px, 500px);
+        // color: $white;
+        // white-space: nowrap;
+        // content: attr(data-item);
+        // background-color: $white;
+        // -webkit-transition: clip .7s cubic-bezier(.075, .82, .165, 1),color .5s ease-in;
+        //    -moz-transition: clip .7s cubic-bezier(.075, .82, .165, 1),color .5s ease-in .1s;
+        //      -o-transition: clip .7s cubic-bezier(.075, .82, .165, 1),color .5s ease-in .1s;
+        //         transition: clip .7s cubic-bezier(.075, .82, .165, 1),color .5s ease-in .1s;
+        // -webkit-transition-delay: 0s,.1s;
+        // @media (min-width: 48em) {
+        //   top: -21%;
+        //   padding-top: 13px;
+        // }
       }
     }
     .menu--is-active {

@@ -27,6 +27,8 @@
     padding-right: 1em;
   }
   &__menu {
+    position: absolute;
+    right: 3%;
     z-index: 9999;
     display: inline-block;
     width: 30px;

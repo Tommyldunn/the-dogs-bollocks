@@ -22,7 +22,8 @@ export class SiteHeaderComponent {
   toggleNav() {
     document.body.classList.toggle('nav--is-open');
 
-    if (document.body.classList.contains('home') ||
+    if (document.body.classList.contains('index') ||
+      document.body.classList.contains('home') ||
       document.body.classList.contains('about') ||
       document.body.classList.contains('upcoming-shows')) {
 

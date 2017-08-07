@@ -33,10 +33,10 @@ export class SiteRootComponent {
       if (event instanceof NavigationEnd) {
         this.removeBodyClasses();
         this.addBodyClasses(event.url.substring(1));
-        if (event.url === '/' || event.url === 'home') {
-          document.body.classList.add('home');
+        if (event.url === '/') {
+          document.body.classList.add('index');
         } else {
-          document.body.classList.remove('home');
+          document.body.classList.remove('index');
         }
       }
     });
