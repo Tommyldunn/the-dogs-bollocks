@@ -1,20 +1,21 @@
 .tag {
-  align-items: center;
-  background-color: $background;
-  border-radius: 290486px;
-  color: $text;
   display: inline-flex;
-  font-size: $size-small;
   height: 2em;
-  justify-content: center;
+  padding-right: .875em;
+  padding-left: .875em;
+  font-size: $size-small;
   line-height: 1.5;
-  padding-left: 0.875em;
-  padding-right: 0.875em;
+  // border-radius: 290486px;
+  color: $text;
   white-space: nowrap;
+  background-color: $background;
+
+  align-items: center;
+  justify-content: center;
 
   .delete {
-    margin-left: 0.25em;
-    margin-right: -0.375em;
+    margin-right: -.375em;
+    margin-left: .25em;
   }
 
   // Colors
@@ -23,8 +24,8 @@
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      background-color: $color;
       color: $color-invert;
+      background-color: $color;
     }
   }
 
