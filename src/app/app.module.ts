@@ -3,18 +3,29 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from './core/core.module';
+
+import { SiteRootComponent } from './site-root.component';
+import { SiteHomeComponent } from './site-home/site-home.component';
+import { SiteAboutComponent } from './site-about/site-about.component';
+import { UpcomingShowsComponent } from './upcoming-shows/upcoming-shows.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
+    CoreModule
+  ],
+  declarations: [
+    SiteRootComponent,
+    SiteHomeComponent,
+    SiteAboutComponent,
+    UpcomingShowsComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [SiteRootComponent]
 })
 export class AppModule { }

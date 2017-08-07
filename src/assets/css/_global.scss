@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  outline: none;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-highlight: none;
+}
+
+body {
+  transition: background-color .3s 0s ease-out;
+  &.dark {
+    .site__sidebar-wrapper {
+      color: $secondary-color;
+      background-color: $base-dark;
+    }
+  }
+  &.light {
+    .site__sidebar-wrapper {
+      color: $black;
+      background-color: $secondary-color;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .3s 0s ease-out;
+}
+
+main {
+  margin-top: 3.3em;
+}
+
+.close {
+  font-size: 1.3em;
+  color: $white;
+  &:hover {
+    color: darken($white, 10%);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}

@@ -1,0 +1,121 @@
+body {
+  font-family: $font-family__roboto;
+  font-size: 1em;
+  color: $black;
+
+  -webkit-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+}
+
+a {
+  font-family: $font-family__roboto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+h1, .heading-1 {
+  margin-bottom: -.04em;
+  font-family: $font-family__roboto;
+  font-size: 2.8em;
+  line-height: .85em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 35.5em) {
+  h1, .heading-1 {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 48em) {
+  h1, .heading-1 {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 65em) {
+  h1, .heading-1 {
+    font-size: 5em;
+  }
+}
+
+@media (min-width: 106em) {
+  h1, .heading-1 {
+    font-size: 5.5em;
+  }
+}
+
+@media (min-width: 35.5em) {
+  h1 span, .heading-1 span {
+    display: block;
+    white-space: nowrap;
+  }
+}
+
+h2, .heading-2 {
+  margin-bottom: -.04em;
+  font-family: $font-family__roboto;
+  font-size: 1.4em;
+  line-height: .95em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 35.5em) {
+  h2, .heading-2 {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 48em) {
+  h2, .heading-2 {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 65em) {
+  h2, .heading-2 {
+    font-size: 2.5em;
+  }
+}
+
+h3, .heading-3 {
+  font-family: $font-family__roboto;
+  font-size: 2.25em;
+  line-height: 1.16667;
+  text-transform: uppercase;
+}
+
+h4, .heading-4 {
+  font-family: $font-family__roboto;
+  font-size: 1.875em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+h5, .heading-5 {
+  font-family: $font-family__roboto;
+  font-size: 1.5em;
+  line-height: 1.875;
+  text-transform: uppercase;
+}
+
+h6, .heading-6 {
+  font-family: $font-family__roboto;
+  font-size: 1.375em;
+  line-height: 1.36364;
+  text-transform: uppercase;
+}
+
+p {
+  padding: 0 0 1.5em;
+  margin: 0;
+  line-height: 1.5;
+  &.secondary {
+    font-style: italic;
+    color: $secondary-color;
+  }
+}
