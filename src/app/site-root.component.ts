@@ -1,5 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd, Event } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd, RoutesRecognized, Event } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -33,6 +33,11 @@ export class SiteRootComponent {
       if (event instanceof NavigationEnd) {
         this.removeBodyClasses();
         this.addBodyClasses(event.url.substring(1));
+        if (event.url === '/' || event.url === 'home') {
+          document.body.classList.add('home');
+        } else {
+          document.body.classList.remove('home');
+        }
       }
     });
   }
