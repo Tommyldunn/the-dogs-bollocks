@@ -6,7 +6,7 @@
     background-color: $base-dark;
   }
   &.pink {
-    background-color: $accent;
+    background-color: $red;
   }
 }
 
@@ -106,7 +106,7 @@
       &:hover {
         &::after {
           clip: rect(0, 1000px, 100px, 0);
-          color: $accent;
+          color: $white;
         }
       }
       &::after {
@@ -117,10 +117,10 @@
         height: 100%;
         padding: 0 33px 0;
         clip: rect(0, 1000px, 100px, 500px);
-        color: $white;
+        color: $red;
         white-space: nowrap;
         content: attr(data-item);
-        background-color: $white;
+        background-color: $red;
         transition: clip .7s cubic-bezier(.075, .82, .165, 1),color .5s ease-in .1s;
         @media (min-width: 48em) {
           // top: -21%;
@@ -222,12 +222,12 @@
       &:hover {
         &::after {
           clip: rect(0, 1000px, 100px, 0);
-          color: $accent;
+          color: $white;
         }
       }
       &::after {
         clip: rect(0, 1000px, 100px, 0);
-        color: $accent;
+        color: $white;
       }
     }
   }

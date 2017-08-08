@@ -1,4 +1,7 @@
 <header [class.fixed]="navIsFixed" class="site-header" [ngClass]="{'site-header--home': home}">
+  <a class="site-header__link" routerLink="/home">
+    <img class="site-header__image" src="/assets/images/logo-dog.svg" />
+    </a>
   <a class="site-header__menu toggle-offcanvas" (click)="toggleNav()">
       <span class="site-header__icon-bar"></span>
       <span class="site-header__icon-bar"></span>
