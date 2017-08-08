@@ -5,10 +5,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "build.prod": "ng build --environment=prod --target=production --aot=true",
+    "serve.prod": "ng server --environment=prod --target=production --aot=true",
+    "serve.dev": "ng serve --port 3000 --host local.dev.com --sourcemap",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "heroku-postbuild": "yarn build.prod"
   },
   "private": true,
   "dependencies": {
