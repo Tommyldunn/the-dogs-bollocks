@@ -9,7 +9,7 @@ import { DOCUMENT } from '@angular/platform-browser';
 export class SiteHeaderComponent {
 
   public navIsFixed: boolean;
-
+  public isHome: boolean;
   constructor( @Inject(DOCUMENT) private document: any,
     private router: Router,
     private element: ElementRef) {

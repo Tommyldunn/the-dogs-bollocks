@@ -26,6 +26,7 @@
     padding-right: 1em;
   }
   &__link {
+    transition: all 250ms ease-in-out;
     img {
       height: 2.2rem;
     }

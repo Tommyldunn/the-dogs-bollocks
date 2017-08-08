@@ -1,3 +1,20 @@
-.hero {
-  padding-top: 5rem;
+.main-hero {
+  // padding-top: 5rem;
+}
+.upcoming-dates {
+  background-color: #ff3860;
+  .container {
+    justify-content: center;
+    h4 {
+      color: #fff;
+    }
+  }
+  .box {
+    h6 {
+      color: #2a2b2a;
+    }
+    a {
+      color: #ff3860;
+    }
+  }
 }
