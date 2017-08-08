@@ -11,6 +11,7 @@ import { SiteRootComponent } from './site-root.component';
 import { SiteHomeComponent } from './site-home/site-home.component';
 import { SiteAboutComponent } from './site-about/site-about.component';
 import { UpcomingShowsComponent } from './upcoming-shows/upcoming-shows.component';
+import { SiteMembersComponent } from './site-members/site-members.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { UpcomingShowsComponent } from './upcoming-shows/upcoming-shows.componen
     SiteRootComponent,
     SiteHomeComponent,
     SiteAboutComponent,
-    UpcomingShowsComponent
+    UpcomingShowsComponent,
+    SiteMembersComponent
   ],
   providers: [],
   bootstrap: [SiteRootComponent]

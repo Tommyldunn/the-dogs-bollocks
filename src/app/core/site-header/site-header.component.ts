@@ -25,6 +25,7 @@ export class SiteHeaderComponent {
     if (document.body.classList.contains('index') ||
       document.body.classList.contains('home') ||
       document.body.classList.contains('about') ||
+      document.body.classList.contains('bios') ||
       document.body.classList.contains('upcoming-shows')) {
 
       document.body.classList.add('dark');

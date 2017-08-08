@@ -17,4 +17,15 @@
       color: #ff3860;
     }
   }
+  .is-full {
+    .button {
+      width: 100%;
+    }
+  }
+}
+.members {
+  // background-color: #2a2b2a;
+  .member-list__image {
+    border-radius: 50%;
+  }
 }
