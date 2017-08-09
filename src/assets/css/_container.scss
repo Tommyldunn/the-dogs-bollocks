@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1068px) {
+  .container {
+    width: 960px;
+    max-width: 960px;
+  }
+  .container.is-fluid {
+    width: auto;
+    max-width: none;
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+}
+
+@media screen and (max-width: 1259px) {
+  .container.is-widescreen {
+    width: auto;
+    max-width: 1152px;
+  }
+}
+
+@media screen and (max-width: 1451px) {
+  .container.is-fullhd {
+    width: auto;
+    max-width: 1344px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .container {
+    width: 1152px;
+    max-width: 1152px;
+  }
+}
+
+@media screen and (min-width: 1452px) {
+  .container {
+    width: 1344px;
+    max-width: 1344px;
+  }
+}
