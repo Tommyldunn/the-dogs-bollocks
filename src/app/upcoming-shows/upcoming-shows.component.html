@@ -8,20 +8,24 @@
 <section class="section">
   <div class="container">
     <div class="columns is-multiline">
-      <div class="error column is-full" *ngIf="error">{{error}}</div>
+      <div class="error column is-full" *ngIf="error">{{ error }}</div>
 
-      <div *ngFor="let show of shows" (click)="onSelect(show)" [class.selected]="show === selectedShow" class="column is-half">
+      <div *ngFor="let show of shows" (click)="onSelect(show)" [class.selected]="show === selectedShow" class="column is-full">
         <div class="card">
-          <div class="card-image">
+          <div class="card-image {{ show.venueImage_class }}">
             <a href="{{ show.venueLink }}" target="_blank">
               <img [src]="show.venueImage" />
             </a>
           </div>
           <div class="card-content">
             <div class="content">
-              <strong><a href="{{ show.venueLink }}" target="_blank">{{ show.venueName }}</a></strong><br />
-              <strong>{{ show.date }}</strong><br />
-              <strong>{{ show.venueAddress }}</strong>
+              <div class="content-left">
+                <strong><a href="{{ show.venueLink }}" target="_blank">{{ show.venueName }}</a></strong><br />
+                <strong>{{ show.date }}</strong><br />
+              </div>
+              <div class="content-right">
+                <strong>{{ show.venueAddress }}</strong>
+              </div>
             </div>
           </div>
         </div>

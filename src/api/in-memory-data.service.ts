@@ -4,6 +4,7 @@ export class InMemoryDataService {
       {
         id: 1,
         venueImage: '/assets/images/carra.png',
+        venueImage_class: 'black',
         venueName: 'Carraghers',
         venueLink: 'http://carraghersnyc.com/',
         venueAddress: '228 W 39th St, New York, NY 10018',
@@ -11,6 +12,7 @@ export class InMemoryDataService {
       }, {
         id: 2,
         venueImage: '/assets/images/arlenesgrocery.jpg',
+        venueImage_class: 'black',
         venueName: 'Arlenes Grocery',
         venueLink: 'http://www.arlenesgrocery.net/',
         venueAddress: '95 Stanton St. NYC',
@@ -18,6 +20,7 @@ export class InMemoryDataService {
       }, {
         id: 3,
         venueImage: '/assets/images/carra.png',
+        venueImage_class: 'black',
         venueName: 'Carraghers',
         venueLink: 'http://carraghersnyc.com/',
         venueAddress: '228 W 39th St, New York, NY 10018',
@@ -25,6 +28,7 @@ export class InMemoryDataService {
       }, {
         id: 4,
         venueImage: '/assets/images/carra.png',
+        venueImage_class: 'black',
         venueName: 'Carraghers',
         venueLink: 'http://carraghersnyc.com/',
         venueAddress: '228 W 39th St, New York, NY 10018',

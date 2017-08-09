@@ -2,4 +2,15 @@
   agm-map {
     height: 300px;
   }
+  .card-image {
+    &.black {
+      background-color: #000;
+    }
+  }
+  .content {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+  }
 }
