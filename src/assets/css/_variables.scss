@@ -23,5 +23,9 @@ $secondary-color: #c3cad9;
 $base-red: #ff3860;
 $accent: #00dffc;
 
+//  Links
+$link: $red !default;
+$link-hover: lighten($red, 20%) !default;
+
 // Font
 $font-family__roboto: "Roboto", sans-serif;

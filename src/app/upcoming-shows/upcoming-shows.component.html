@@ -8,114 +8,26 @@
 <section class="section">
   <div class="container">
     <div class="columns is-multiline">
-      <div class="column is-full">
+      <div class="error column is-full" *ngIf="error">{{error}}</div>
+
+      <div *ngFor="let show of shows" (click)="onSelect(show)" [class.selected]="show === selectedShow" class="column is-half">
         <div class="card">
           <div class="card-image">
-            <agm-map
-            [latitude]="40.7544"
-            [longitude]="-73.98954149999997"
-            [zoom]="zoom"
-            [disableDefaultUI]="true"
-            [zoomControl]="false"
-            [maxZoom]="zoom"
-            [minZoom]="zoom">
-            <agm-marker
-            [latitude]="40.7544"
-            [longitude]="-73.98954149999997">
-            <agm-info-window [isOpen]="true">
-              <strong><a href="http://carraghersnyc.com/" target="_blank">Carragher's</a></strong>
-            </agm-info-window>
-          </agm-marker>
-        </agm-map>
-      </div>
-      <div class="card-content">
-        <div class="content">
-          Sunday Aug 27
+            <a href="{{ show.venueLink }}" target="_blank">
+              <img [src]="show.venueImage" />
+            </a>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <strong><a href="{{ show.venueLink }}" target="_blank">{{ show.venueName }}</a></strong><br />
+              <strong>{{ show.date }}</strong><br />
+              <strong>{{ show.venueAddress }}</strong>
+            </div>
+          </div>
         </div>
       </div>
+
+
     </div>
   </div>
-  <div class="column is-full">
-    <div class="card">
-      <div class="card-image">
-        <agm-map
-        [latitude]="40.7212398"
-        [longitude]="-73.9883638"
-        [disableDefaultUI]="true"
-        [zoomControl]="false"
-        [zoom]="zoom"
-        [maxZoom]="zoom"
-        [minZoom]="zoom">
-        <agm-marker
-        [latitude]="40.7212398"
-        [longitude]="-73.9883638">
-        <agm-info-window [isOpen]="true">
-          <strong><a href="http://www.arlenesgrocery.net/" target="_blank">Arlene's Grocery</a></strong>
-        </agm-info-window>
-      </agm-marker>
-    </agm-map>
-  </div>
-  <div class="card-content">
-    <div class="content">
-      Saturday Sep 16
-    </div>
-  </div>
-</div>
-</div>
-<div class="column is-full">
-  <div class="card">
-    <div class="card-image">
-      <agm-map
-      [latitude]="40.7544"
-      [longitude]="-73.98954149999997"
-      [zoom]="zoom"
-      [disableDefaultUI]="true"
-      [zoomControl]="false"
-      [maxZoom]="zoom"
-      [minZoom]="zoom">
-      <agm-marker
-      [latitude]="40.7544"
-      [longitude]="-73.98954149999997">
-      <agm-info-window [isOpen]="true">
-        <strong><a href="http://carraghersnyc.com/" target="_blank">Carragher's</a></strong>
-      </agm-info-window>
-    </agm-marker>
-  </agm-map>
-</div>
-<div class="card-content">
-  <div class="content">
-    Sunday Oct 1
-  </div>
-</div>
-</div>
-</div>
-<div class="column is-full">
-  <div class="card">
-    <div class="card-image">
-      <agm-map
-      [latitude]="40.7544"
-      [longitude]="-73.98954149999997"
-      [zoom]="zoom"
-      [disableDefaultUI]="true"
-      [zoomControl]="false"
-      [maxZoom]="zoom"
-      [minZoom]="zoom">
-      <agm-marker
-      [latitude]="40.7544"
-      [longitude]="-73.98954149999997">
-      <agm-info-window [isOpen]="true">
-        <strong><a href="http://carraghersnyc.com/" target="_blank">Carragher's</a></strong>
-      </agm-info-window>
-    </agm-marker>
-  </agm-map>
-</div>
-<div class="card-content">
-  <div class="content">
-    Sunday Oct 14
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </section>

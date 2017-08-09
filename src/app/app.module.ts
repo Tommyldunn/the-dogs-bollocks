@@ -3,9 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from '../api/in-memory-data.service';
+
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { AgmCoreModule } from '@agm/core';
+
+import { ShowService } from './_services/show.service';
 
 import { SiteRootComponent } from './site-root.component';
 import { SiteHomeComponent } from './site-home/site-home.component';
@@ -20,9 +25,8 @@ import { SiteMembersComponent } from './site-members/site-members.component';
     HttpModule,
     AppRoutingModule,
     CoreModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCJRuAzLyth5GEUNffcxi2DCFOjLzqJaUE'
-    })
+    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 600 }),
+    AgmCoreModule.forRoot({ apiKey: 'AIzaSyCJRuAzLyth5GEUNffcxi2DCFOjLzqJaUE' })
   ],
   declarations: [
     SiteRootComponent,
@@ -31,7 +35,7 @@ import { SiteMembersComponent } from './site-members/site-members.component';
     UpcomingShowsComponent,
     SiteMembersComponent
   ],
-  providers: [],
+  providers: [ShowService],
   bootstrap: [SiteRootComponent]
 })
 export class AppModule { }
