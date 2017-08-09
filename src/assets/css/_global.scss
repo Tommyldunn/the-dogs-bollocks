@@ -9,8 +9,23 @@
   -webkit-highlight: none;
 }
 
+html {
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: $body-size;
+  background-color: $white;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: $render-mode;
+}
+
 body {
-  background-color: $light-grey;
+  font-size: 1rem;
+  font-weight: $weight-normal;
+  line-height: 1.5;
+  color: $text;
   transition: background-color .3s 0s ease-out;
   &.dark {
     .site__sidebar-wrapper {
@@ -44,12 +59,13 @@ body {
 }
 
 a {
-  color: $base-red;
+  color: $red;
   text-decoration: none;
   cursor: pointer;
-  transition: all .3s 0s ease-out;
+  transition: none $speed $easing;
+
   &:hover {
-    color: darken($base-red, 10%);
+    color: $link-hover;
   }
 }
 
@@ -57,25 +73,50 @@ main {
   margin-top: 3.2em;
 }
 
+hr {
+  display: block;
+  height: 1px;
+  margin: 1.5rem 0;
+  background-color: $border;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+strong {
+  font-weight: $weight-bold;
+  color: $text-strong;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: $family-primary;
+}
+
 .close {
   font-size: 1.3em;
   color: $white;
   &:hover {
     color: darken($white, 10%);
-  }
-}
-@keyframes logo-fall {
-  0% {
-    top: -500px;
-    opacity: 0;
-  }
-
-  75% {
-    top: 10px;
-  }
-
-  100% {
-    top: 0;
-    opacity: 1;
   }
 }

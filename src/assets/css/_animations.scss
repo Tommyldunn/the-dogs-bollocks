@@ -1,0 +1,25 @@
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes logo-fall {
+  0% {
+    top: -500px;
+    opacity: 0;
+  }
+
+  75% {
+    top: 10px;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

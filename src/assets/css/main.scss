@@ -2,9 +2,12 @@
 
 @import "variables";
 @import "normalize";
-@import "utilities";
+@import "animations";
+@import "mixins";
 @import "vendor/vendor";
+@import "utilities";
 @import "typography";
 @import "global";
+
 @import "site-header";
 @import "site-sidebar";

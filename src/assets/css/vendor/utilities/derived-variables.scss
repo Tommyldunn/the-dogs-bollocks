@@ -1,10 +1,8 @@
 $primary: $turquoise !default;
-
 $info: $blue !default;
 $success: $green !default;
 $warning: $yellow !default;
 $danger: $red !default;
-
 $light: $white-ter !default;
 $dark: $grey-darker !default;
 
@@ -17,7 +15,6 @@ $turquoise-invert: findColorInvert($turquoise) !default;
 $blue-invert: findColorInvert($blue) !default;
 $purple-invert: findColorInvert($purple) !default;
 $red-invert: findColorInvert($red) !default;
-
 $primary-invert: $turquoise-invert !default;
 $info-invert: $blue-invert !default;
 $success-invert: $green-invert !default;
@@ -29,7 +26,6 @@ $dark-invert: $light !default;
 // General colors
 
 $background: $white-ter !default;
-
 $border: $grey-lighter !default;
 $border-hover: $grey-light !default;
 
@@ -44,7 +40,6 @@ $text-strong: $grey-darker !default;
 
 $code: $red !default;
 $code-background: $background !default;
-
 $pre: $text !default;
 $pre-background: $background !default;
 
@@ -53,21 +48,16 @@ $pre-background: $background !default;
 $link: $primary !default;
 $link-invert: $primary-invert !default;
 $link-visited: $purple !default;
-
 $link-hover: $grey-darker !default;
 $link-hover-border: $grey-light !default;
-
 $link-focus: $grey-darker !default;
 $link-focus-border: $primary !default;
-
 $link-active: $grey-darker !default;
 $link-active-border: $grey-dark !default;
 
 // Typography
 
-$family-primary: $family-sans-serif !default;
-$family-code: $family-monospace !default;
-
+$family-primary: $font-family__roboto !default;
 $size-small: $size-7 !default;
 $size-normal: $size-6 !default;
 $size-medium: $size-5 !default;
@@ -76,5 +66,4 @@ $size-large: $size-4 !default;
 // Lists and maps
 
 $colors: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "info": ($info, $info-invert), "success": ($success, $success-invert), "warning": ($warning, $warning-invert), "danger": ($danger, $danger-invert)) !default;
-
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 !default;
