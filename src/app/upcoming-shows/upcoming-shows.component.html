@@ -24,7 +24,9 @@
                 <strong>{{ show.date }}</strong><br />
               </div>
               <div class="content-right">
-                <strong>{{ show.venueAddress }}</strong>
+                <strong><a href="https://www.google.com/maps/search/?api=1&query={{ show.venueAddress }}" target="_blank">
+                          {{ show.venueAddress }}
+                  </a></strong>
               </div>
             </div>
           </div>
