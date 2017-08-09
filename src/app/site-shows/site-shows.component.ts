@@ -6,12 +6,12 @@ import { ShowService } from '../_services/show.service';
 
 
 @Component({
-  selector: 'site-upcoming-shows',
-  templateUrl: 'upcoming-shows.component.html',
-  styleUrls: ['upcoming-shows.component.scss']
+  selector: 'site-shows',
+  templateUrl: 'site-shows.component.html',
+  styleUrls: ['site-shows.component.scss']
 })
 
-export class UpcomingShowsComponent implements OnInit {
+export class SiteShowsComponent implements OnInit {
   shows: Show[];
   selectedShow: Show;
   error: any;
