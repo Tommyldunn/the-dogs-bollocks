@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
+import { SpinnerService } from '../core/site-spinner/site-spinner.service';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/finally';
+import 'rxjs/add/operator/map';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -9,71 +14,28 @@ import { Show } from '../_models/show';
 export class ShowService {
   private showsUrl = 'api/shows';  // URL to web api
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private spinnerService: SpinnerService) { }
 
-  getShows(): Promise<Array<Show>> {
-    return this.http
+  getShows() {
+    this.spinnerService.show();
+    return <Observable<Show[]>>this.http
       .get(this.showsUrl)
-      .toPromise()
-      .then((response) => {
-        return response.json().data as Show[];
-      })
-      .catch(this.handleError);
-  }
-
-  getShow(id: number): Promise<Show> {
-    return this.getShows()
-      .then(shows => shows.find(show => show.id === id));
-  }
-
-  save(hero: Show): Promise<Show> {
-    if (hero.id) {
-      return this.put(hero);
-    }
-    return this.post(hero);
-  }
-
-  delete(hero: Show): Promise<Response> {
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
-    const url = `${this.showsUrl}/${hero.id}`;
-
-    return this.http
-      .delete(url, { headers: headers })
-      .toPromise()
-      .catch(this.handleError);
-  }
-
-  // Add new Show
-  private post(hero: Show): Promise<Show> {
-    const headers = new Headers({
-      'Content-Type': 'application/json'
-    });
-
-    return this.http
-      .post(this.showsUrl, JSON.stringify(hero), { headers: headers })
-      .toPromise()
-      .then(res => res.json().data)
-      .catch(this.handleError);
-  }
-
-  // Update existing Show
-  private put(hero: Show): Promise<Show> {
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
-    const url = `${this.showsUrl}/${hero.id}`;
-
-    return this.http
-      .put(url, JSON.stringify(hero), { headers: headers })
-      .toPromise()
-      .then(() => hero)
-      .catch(this.handleError);
+      .map(res => this.extractData<Show[]>(res))
+      .catch(this.handleError)
+      .finally(() => this.spinnerService.hide());
   }
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);
   }
+
+  private extractData<T>(res: Response) {
+    if (res.status < 200 || res.status >= 300) {
+      throw new Error('Bad response status: ' + res.status);
+    }
+    const body = res.json ? res.json() : null;
+    return <T>(body && body.data || {});
+  }
+
 }

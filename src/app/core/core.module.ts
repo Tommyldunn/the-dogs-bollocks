@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { SpinnerModule } from './site-spinner/site-spinner.module';
 
 import { SiteHeaderComponent } from './site-header/site-header.component';
 import { SiteSidebarComponent } from './site-sidebar/site-sidebar.component';
@@ -10,13 +11,15 @@ import { SiteSidebarComponent } from './site-sidebar/site-sidebar.component';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    SpinnerModule
   ],
   declarations: [
     SiteHeaderComponent,
     SiteSidebarComponent
   ],
   exports: [
+    SpinnerModule,
     SiteHeaderComponent,
     SiteSidebarComponent
   ]

@@ -1,6 +1,8 @@
 import { Component, ElementRef } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd, RoutesRecognized, Event } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd, NavigationCancel,
+  NavigationError, NavigationStart, RoutesRecognized, Event } from '@angular/router';
 import { Location } from '@angular/common';
+import { SpinnerService } from './core/site-spinner/site-spinner.service';
 
 @Component({
   selector: 'site-root',
@@ -28,7 +30,8 @@ export class SiteRootComponent {
     });
   }
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+    private spinnerService: SpinnerService) {
     router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         this.removeBodyClasses();
@@ -40,7 +43,18 @@ export class SiteRootComponent {
         }
       }
     });
+    router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd ||
+        event instanceof NavigationCancel ||
+        event instanceof NavigationError) {
+        this.spinnerService.hide();
+      } else if (event instanceof NavigationStart) {
+        this.spinnerService.show();
+      }
+    });
+
   }
+
   navToggleHandler(isOpen: boolean) {
     this.menuOpen = isOpen;
   }

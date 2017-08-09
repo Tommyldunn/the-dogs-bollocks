@@ -11,8 +11,7 @@ import { ShowService } from '../_services/show.service';
 })
 
 export class SiteShowsComponent implements OnInit {
-  shows: Show[];
-  selectedShow: Show;
+  shows: Show[] = [];
   error: any;
   zoom = 17;
   lat: number;
@@ -27,21 +26,12 @@ export class SiteShowsComponent implements OnInit {
     this.lng = -73.98954149999997;
   }
 
-  getShows(): void {
-
+  getShows() {
+    this.shows = [];
     this.showService.getShows()
-      .then(shows => {
-        this.shows = shows
-      })
-      .catch(error => this.error = error);
+      .subscribe(shows => {
+        this.shows = this.shows = shows;
+      });
   }
-
-  onSelect(show: Show): void {
-    this.selectedShow = show;
-  }
-
-  // gotoDetail(): void {
-  //   this.router.navigate(['/detail', this.selectedShow.id]);
-  // }
 
 }

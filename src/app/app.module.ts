@@ -25,7 +25,7 @@ import { SiteMembersComponent } from './site-members/site-members.component';
     HttpModule,
     AppRoutingModule,
     CoreModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 600 }),
+    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 }),
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyCJRuAzLyth5GEUNffcxi2DCFOjLzqJaUE' })
   ],
   declarations: [
