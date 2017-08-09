@@ -5,8 +5,7 @@ import { SpinnerState, SpinnerService } from './site-spinner.service';
 
 @Component({
   selector: 'site-spinner',
-  templateUrl: 'site-spinner.component.html',
-  styleUrls: ['site-spinner.component.scss']
+  templateUrl: 'site-spinner.component.html'
 })
 export class SpinnerComponent implements OnInit {
   public visible = false;
