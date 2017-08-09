@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 import { Show } from '../_models/show';
 import { ShowService } from '../_services/show.service';
@@ -19,7 +18,6 @@ export class SiteShowsComponent implements OnInit {
   lat: number;
   lng: number;
   constructor(
-    private router: Router,
     private showService: ShowService) {
   }
 
@@ -42,8 +40,8 @@ export class SiteShowsComponent implements OnInit {
     this.selectedShow = show;
   }
 
-  gotoDetail(): void {
-    this.router.navigate(['/detail', this.selectedShow.id]);
-  }
+  // gotoDetail(): void {
+  //   this.router.navigate(['/detail', this.selectedShow.id]);
+  // }
 
 }
