@@ -154,6 +154,12 @@
       padding-top: 65px;
     }
   }
+  .item--link {
+    margin-bottom: 10px;
+    &.menu--is-active {
+      color: $red;
+    }
+  }
 }
 
 .menu--item a {
