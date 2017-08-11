@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'site-site-members',
   templateUrl: './site-members.component.html',
-  styleUrls: ['./site-members.component.scss']
+  styles: [`.member-list__image {
+    border-radius: 50%;
+  }`]
 })
 export class SiteMembersComponent implements OnInit {
 

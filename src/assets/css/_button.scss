@@ -1,26 +1,21 @@
 $button: $grey-darker !default;
 $button-background: $white !default;
 $button-border: $grey-lighter !default;
-
 $button-hover: $link-hover !default;
 $button-hover-border: $link-hover-border !default;
-
 $button-focus: $link-focus !default;
 $button-focus-border: $link-focus-border !default;
-
 $button-active: $link-active !default;
 $button-active-border: $link-active-border !default;
-
 $button-static: $grey !default;
 $button-static-background: $white-ter !default;
 $button-static-border: $grey-lighter !default;
-
-$button-shadow-inset: inset 0 1px 2px rgba($black, 0.2) !default;
+$button-shadow-inset: inset 0 1px 2px rgba($black, .2) !default;
 
 // The button sizes use mixins so they can be used at different breakpoints
 @mixin button-small {
-  border-radius: $radius-small;
   font-size: $size-small;
+  border-radius: $radius-small;
 }
 
 @mixin button-medium {
@@ -32,18 +27,18 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, 0.2) !default;
 }
 
 .button {
-  @include control;
-  @include unselectable;
-
-  background-color: $button-background;
-  border-color: $button-border;
+  padding-right: .75em;
+  padding-left: .75em;
   color: $button;
-  cursor: pointer;
-  justify-content: center;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
   text-align: center;
   white-space: nowrap;
+  cursor: pointer;
+  background-color: $button-background;
+  border-color: $button-border;
+
+  @include control;
+  @include unselectable;
+  justify-content: center;
 
   strong {
     color: inherit;
@@ -54,53 +49,53 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, 0.2) !default;
     &.is-small,
     &.is-medium,
     &.is-large {
-      height: 1.5em;
       width: 1.5em;
+      height: 1.5em;
     }
 
     &:first-child:not(:last-child) {
-      margin-left: calc(-0.375em - 1px);
-      margin-right: 0.1875em;
+      margin-right: .1875em;
+      margin-left: calc(-.375em - 1px);
     }
 
     &:last-child:not(:first-child) {
-      margin-left: 0.1875em;
-      margin-right: calc(-0.375em - 1px);
+      margin-right: calc(-.375em - 1px);
+      margin-left: .1875em;
     }
 
     &:first-child:last-child {
-      margin-left: calc(-0.375em - 1px);
-      margin-right: calc(-0.375em - 1px);
+      margin-right: calc(-.375em - 1px);
+      margin-left: calc(-.375em - 1px);
     }
   }
 
   // States
   &:hover,
   &.is-hovered {
-    border-color: $button-hover-border;
     color: $button-hover;
+    border-color: $button-hover-border;
   }
 
   &:focus,
   &.is-focused {
-    border-color: $button-focus-border;
-    box-shadow: 0 0 0.5em rgba($button-focus-border, 0.25);
     color: $button-focus;
+    border-color: $button-focus-border;
+    box-shadow: 0 0 .5em rgba($button-focus-border, .25);
   }
 
   &:active,
   &.is-active {
+    color: $button-active;
     border-color: $button-active-border;
     box-shadow: $button-shadow-inset;
-    color: $button-active;
   }
 
   // Colors
   &.is-link {
-    background-color: transparent;
-    border-color: transparent;
     color: $text;
     text-decoration: underline;
+    background-color: transparent;
+    border-color: transparent;
 
     &:hover,
     &.is-hovered,
@@ -108,8 +103,8 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, 0.2) !default;
     &.is-focused,
     &:active,
     &.is-active {
-      background-color: $background;
       color: $text-strong;
+      background-color: $background;
     }
 
     &[disabled] {
@@ -124,30 +119,30 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, 0.2) !default;
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
+      color: $color-invert;
       background-color: $color;
       border-color: transparent;
-      color: $color-invert;
 
       &:hover,
       &.is-hovered {
+        color: $color-invert;
         background-color: darken($color, 2.5%);
         border-color: transparent;
-        color: $color-invert;
       }
 
       &:focus,
       &.is-focused {
-        border-color: transparent;
-        box-shadow: 0 0 0.5em rgba($color, 0.25);
         color: $color-invert;
+        border-color: transparent;
+        box-shadow: 0 0 .5em rgba($color, .25);
       }
 
       &:active,
       &.is-active {
+        color: $color-invert;
         background-color: darken($color, 5%);
         border-color: transparent;
         box-shadow: $button-shadow-inset;
-        color: $color-invert;
       }
 
       &[disabled] {
@@ -157,18 +152,18 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, 0.2) !default;
       }
 
       &.is-inverted {
-        background-color: $color-invert;
         color: $color;
+        background-color: $color-invert;
 
         &:hover {
           background-color: darken($color-invert, 5%);
         }
 
         &[disabled] {
+          color: $color;
           background-color: $color-invert;
           border-color: transparent;
           box-shadow: none;
-          color: $color;
         }
       }
 
@@ -179,15 +174,15 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, 0.2) !default;
       }
 
       &.is-outlined {
+        color: $color;
         background-color: transparent;
         border-color: $color;
-        color: $color;
 
         &:hover,
         &:focus {
+          color: $color-invert;
           background-color: $color;
           border-color: $color;
-          color: $color-invert;
         }
 
         &.is-loading {
@@ -197,29 +192,29 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, 0.2) !default;
         }
 
         &[disabled] {
+          color: $color;
           background-color: transparent;
           border-color: $color;
           box-shadow: none;
-          color: $color;
         }
       }
 
       &.is-inverted.is-outlined {
+        color: $color-invert;
         background-color: transparent;
         border-color: $color-invert;
-        color: $color-invert;
 
         &:hover,
         &:focus {
-          background-color: $color-invert;
           color: $color;
+          background-color: $color-invert;
         }
 
         &[disabled] {
+          color: $color-invert;
           background-color: transparent;
           border-color: $color-invert;
           box-shadow: none;
-          color: $color-invert;
         }
       }
     }
@@ -243,7 +238,7 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, 0.2) !default;
     background-color: $button-background;
     border-color: $button-border;
     box-shadow: none;
-    opacity: 0.5;
+    opacity: .5;
   }
 
   &.is-fullwidth {
@@ -256,26 +251,26 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, 0.2) !default;
     pointer-events: none;
 
     &:after {
+      position: absolute !important;
+
       @include loader;
       @include center(1em);
-
-      position: absolute !important;
     }
   }
 
   &.is-static {
+    color: $button-static;
+    pointer-events: none;
     background-color: $button-static-background;
     border-color: $button-static-border;
-    color: $button-static;
     box-shadow: none;
-    pointer-events: none;
   }
 }
 
 // Adjustment for vertical spacing
 button.button,
 input[type="submit"].button {
+  padding-top: .35em;
+  padding-bottom: .4em;
   line-height: 1;
-  padding-bottom: 0.4em;
-  padding-top: 0.35em;
 }
