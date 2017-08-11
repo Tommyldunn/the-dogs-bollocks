@@ -16,12 +16,13 @@ export class SiteHeaderComponent {
 
     router.events.subscribe((event: Event) => {
       document.body.classList.remove('nav--is-open');
+      document.body.classList.toggle('nav--is-closed');
     });
   }
 
   toggleNav() {
     document.body.classList.toggle('nav--is-open');
-
+    document.body.classList.toggle('nav--is-closed');
     if (document.body.classList.contains('index') ||
       document.body.classList.contains('home') ||
       document.body.classList.contains('about') ||
