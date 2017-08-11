@@ -11,6 +11,7 @@ import { CoreModule } from './core/core.module';
 import { AgmCoreModule } from '@agm/core';
 
 import { ShowService } from './_services/show.service';
+import { MemberService } from './_services/member.service';
 
 import { SiteRootComponent } from './site-root.component';
 import { SiteHomeComponent } from './site-home/site-home.component';
@@ -35,7 +36,7 @@ import { SiteMembersComponent } from './site-members/site-members.component';
     SiteShowsComponent,
     SiteMembersComponent
   ],
-  providers: [ShowService],
+  providers: [ShowService, MemberService],
   bootstrap: [SiteRootComponent]
 })
 export class AppModule { }

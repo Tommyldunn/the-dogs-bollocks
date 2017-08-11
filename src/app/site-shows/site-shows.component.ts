@@ -16,8 +16,7 @@ export class SiteShowsComponent implements OnInit {
   zoom = 17;
   lat: number;
   lng: number;
-  constructor(
-    private showService: ShowService) {
+  constructor(private showService: ShowService) {
   }
 
   ngOnInit(): void {

@@ -8,139 +8,28 @@
 <section class="section">
   <div class="container">
     <div class="columns is-multiline">
-      <div class="column is-half">
-        <div class="box">
-          <article class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img class="member-list__image" src="/assets/images/bart.jpg" />
-              </figure>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>Bart Mol</strong>
-                  <br>
-                  Born in Edam, the cheese-capital of the Netherlands. He's the guy in the back with the guitar, occasionally busting out a solo but mostly thinking about turtle things.
-                </p>
+
+      <div class="column is-half" *ngFor="let m of members">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="{{ m.image }}" alt="Image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-3">{{ m.name }}</p>
               </div>
-              <nav class="level is-mobile">
-                <div class="level-left">
-                  <a class="level-item">
-                    <a class="icon is-small" href="https://www.facebook.com/meelmol" target="_blank"><img src="/assets/images/facebook.svg" /></a>
-                  </a>
-                </div>
-              </nav>
             </div>
-          </article>
+            <div class="content">
+              {{ m.bio }}<br />
+              <a class="icon is-small" *ngIf="m.link" href="{{ m.link }}" target="_blank"><img src="/assets/images/facebook.svg" /></a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="column is-half">
-        <div class="box">
-          <article class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img class="member-list__image" src="/assets/images/andy.jpg" />
-              </figure>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>Andrew Whitney</strong>
-                  <br>
-                </p>
-              </div>
-              <nav class="level is-mobile">
-                <div class="level-left">
-                  <a class="level-item">
-                    <!-- <a class="icon is-small" href="https://www.facebook.com/meelmol" target="_blank"><img src="/assets/images/facebook.svg" /></a> -->
-                  </a>
-                </div>
-              </nav>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="column is-half">
-        <div class="box">
-          <article class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img class="member-list__image" src="/assets/images/tommy.jpg" />
-              </figure>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>Tommy Dunn</strong>
-                  <br>
-                  Boom
-                </p>
-              </div>
-              <nav class="level is-mobile">
-                <div class="level-left">
-                  <a class="level-item">
-                    <a class="icon is-small" href="https://www.facebook.com/tommmyldunn" target="_blank"><img src="/assets/images/facebook.svg" /></a>
-                  </a>
-                </div>
-              </nav>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="column is-half">
-        <div class="box">
-          <article class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img class="member-list__image" src="/assets/images/james.jpg" />
-              </figure>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>James O'Brien</strong>
-                  <br>
-                </p>
-              </div>
-              <nav class="level is-mobile">
-                <div class="level-left">
-                  <a class="level-item">
-                    <!-- <a class="icon is-small" href="https://www.facebook.com/JamesOBrien" target="_blank"><img src="/assets/images/facebook.svg" /></a> -->
-                  </a>
-                </div>
-              </nav>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="column is-half">
-        <div class="box">
-          <article class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img class="member-list__image" src="/assets/images/regan.jpg" />
-              </figure>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>Regan Glover</strong>
-                  <br>
-                  Regan Glover hails from the land of Salt and Honey where she grew up listening to Country Western music.  How the heck she became a lead singer in a rock band is anyone's guess.  She's one of the founding members of The Dog's Bollocks and definitely the prettiest.  If you give her high quality dark chocolate, she will be your best friend; if you add a nice red wine, well...that's probably why she became a lead singer in a rock band.
-                </p>
-              </div>
-              <nav class="level is-mobile">
-                <div class="level-left">
-                  <a class="level-item">
-                    <a class="icon is-small" href="https://www.facebook.com/regan.glover" target="_blank"><img src="/assets/images/facebook.svg" /></a>
-                  </a>
-                </div>
-              </nav>
-            </div>
-          </article>
-        </div>
-      </div>
+
     </div>
   </div>
-  </section>
+</section>
