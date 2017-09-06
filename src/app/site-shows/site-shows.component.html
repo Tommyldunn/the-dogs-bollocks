@@ -10,7 +10,7 @@
     <div class="columns is-multiline">
       <div class="error column is-full" *ngIf="error">{{ error }}</div>
 
-      <div *ngFor="let show of shows" class="column is-half">
+      <div *ngFor="let show of shows" class="column is-full">
         <div class="card">
           <div class="card-image {{ show.venueImage_class }}">
             <a href="{{ show.venueLink }}" target="_blank">
