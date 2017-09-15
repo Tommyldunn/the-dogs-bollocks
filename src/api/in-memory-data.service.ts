@@ -5,14 +5,6 @@ export class InMemoryDataService {
     const shows = [
       {
         id: 1,
-        venueImage: '/assets/images/thedelancey.png',
-        venueImage_class: 'black',
-        venueName: 'The Delancey',
-        venueLink: 'http://thedelancey.com/',
-        venueAddress: '168 Delancey St, New York, NY 10002 ',
-        date: 'Saturday Sep 9'
-      }, {
-        id: 2,
         venueImage: '/assets/images/arlenesgrocery.jpg',
         venueImage_class: 'black',
         venueName: 'Arlenes Grocery',
@@ -20,7 +12,7 @@ export class InMemoryDataService {
         venueAddress: '95 Stanton St. NYC',
         date: 'Saturday Sep 16'
       }, {
-        id: 4,
+        id: 2,
         venueImage: '/assets/images/carra.png',
         venueImage_class: 'black',
         venueName: 'Carraghers',

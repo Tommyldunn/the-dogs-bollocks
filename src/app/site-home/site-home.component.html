@@ -9,24 +9,36 @@
 <section class="hero upcoming-dates">
   <div class="hero-body">
     <div class="container">
-
       <div class="columns is-multiline">
         <div class="column is-full">
           <h5>some upcoming shows</h5>
         </div>
-        <div class="column is-half">
+        <div class="column show-item" *ngFor="let s of shows; let i = index;">
           <div class="box">
-            <h6 class="">Saturday Sep 9</h6>
-            <a href="http://thedelancey.com/" target="_blank">The Delancey</a>
-            <p class="subtitle"> 168 Delancey St, New York, NY 10002</p>
+            <h6 class="">{{ s.date}}</h6>
+            <a class="link" [href]="s.venueLink" target="_blank">{{ s.venueName }}</a>
+            <p class="subtitle">{{ s.venueAddress }}</p>
           </div>
         </div>
-        <div class="column is-half">
-          <div class="box">
-            <h6 class="">Saturday Sep 16</h6>
-            <a class="link" href="http://www.arlenesgrocery.net/" target="_blank">Arlene's Grocery</a>
-            <p class="subtitle">95 Stanton St. NYC</p>
-          </div>
+        <div *ngIf="loading === true" [ngClass]="{'loading': loading}">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+            <rect fill="#fff" width="3" height="100" transform="translate(0) rotate(180 3 50)">
+              <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite" />
+            </rect>
+            <rect x="17" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 20 50)">
+              <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite" begin="0.1s" />
+            </rect>
+            <rect x="40" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 40 50)">
+              <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite" begin="0.3s" />
+            </rect>
+            <rect x="60" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 58 50)">
+              <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite" begin="0.5s" />
+            </rect>
+            <rect x="80" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 76 50)">
+              <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite" begin="0.1s" />
+            </rect>
+          </svg>
         </div>
         <div class="column is-full">
           <a routerLink="/upcoming-shows" class="button is-danger is-inverted is-outlined">View More</a>
