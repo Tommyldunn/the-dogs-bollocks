@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build:production": "ng build --environment=prod --target=production --aot=true",
-    "serve:production": "ng server --environment=prod --target=production --aot=true",
+    "serve:production": "ng serve --environment=prod --target=production --aot=true",
     "serve:development": "ng serve --port 3000 --host local.dev.com --sourcemap",
     "build": "ng build",
     "test": "ng test --single-run --color",
