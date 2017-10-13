@@ -12,15 +12,15 @@ export class InMemoryDataService {
         venueAddress: '104 AVENUE C, NYC, NY 10009',
         date: 'Friday Oct 27'
       },
-      // {
-      //   id: 2,
-      //   venueImage: '/assets/images/carra.png',
-      //   venueImage_class: 'black',
-      //   venueName: 'Carraghers',
-      //   venueLink: 'http://carraghersnyc.com/',
-      //   venueAddress: '228 W 39th St, New York, NY 10018',
-      //   date: 'Sunday Oct 14'
-      // }
+      {
+        id: 2,
+        venueImage: '/assets/images/AlphabetLounge.png',
+        venueImage_class: 'black',
+        venueName: 'Alphabet Lounge',
+        venueLink: 'http://www.alphabetnyc.com/',
+        venueAddress: '104 AVENUE C, NYC, NY 10009',
+        date: 'Friday Nov 10'
+      }
     ];
     const members = [
       {
