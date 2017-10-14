@@ -16,7 +16,7 @@ import { SiteMediaModule } from './site-media/site-media.module';
 
 import { ShowService } from './_services/show.service';
 import { MemberService } from './_services/member.service';
-import { PicService } from './_services/pic.service';
+
 
 import { SiteComponent } from './site.component';
 
@@ -37,7 +37,7 @@ import { SiteComponent } from './site.component';
   declarations: [
     SiteComponent
   ],
-  providers: [ShowService, MemberService, PicService],
+  providers: [ShowService, MemberService],
   bootstrap: [SiteComponent]
 })
 export class SiteModule { }

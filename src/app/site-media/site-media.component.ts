@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Pic } from '../_models/pic';
-import { PicService } from '../_services/pic.service';
+import { Media } from '../_models/media.model';
+import { MediaService } from '../_services/media.service';
 
 @Component({
   selector: 'site-media',
@@ -9,20 +9,20 @@ import { PicService } from '../_services/pic.service';
   styleUrls: ['./site-media.component.scss']
 })
 export class SiteMediaComponent implements OnInit {
-  pics: Pic[];
+  media: Media[];
   error: any;
 
-  constructor(private picService: PicService) { }
+  constructor(private mediaService: MediaService) { }
 
   ngOnInit() {
     //
   }
 
-  getPics() {
-    this.pics = [];
-    this.picService.getPics()
-      .subscribe(pics => {
-        this.pics = this.pics = pics;
+  getMedia() {
+    this.media = [];
+    this.mediaService.getMedia()
+      .subscribe(media => {
+        this.media = this.media = media;
       });
   }
 

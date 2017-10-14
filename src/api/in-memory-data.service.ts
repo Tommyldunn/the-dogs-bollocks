@@ -60,7 +60,7 @@ export class InMemoryDataService {
         bio: 'Born in Edam, the cheese-capital of the Netherlands. He\'\s the guy in the back with the guitar, occasionally busting out a solo but mostly thinking about turtle things.'
       }
     ];
-    const pics = [
+    const media = [
       {
         'images': [
           { 'url': 'assets/images/db-1.jpg' },
@@ -74,6 +74,6 @@ export class InMemoryDataService {
         ]
       }
     ];
-    return { shows, members, pics };
+    return { shows, members, media };
   }
 }

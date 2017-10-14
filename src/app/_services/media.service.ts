@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Pic } from '../_models/pic';
+import { Media } from '../_models/media.model';
 import { CONFIG } from '../core/config';
 
 
@@ -16,26 +16,25 @@ const picsUrl = CONFIG.baseUrls.pics;
 const imagesUrl = CONFIG.baseUrls.picImages;
 
 @Injectable()
-export class PicService {
-  // private picsUrl = 'api/pics';  // URL to web api
-  // private imagesUrl = 'api/pics/images';
+export class MediaService {
 
-  constructor(private http: Http, private spinnerService: SpinnerService) { }
+  constructor(private http: Http,
+    private spinnerService: SpinnerService) { }
 
-  getPics() {
+  getMedia() {
     this.spinnerService.show();
-    return <Observable<Pic[]>>this.http
+    return <Observable<Media[]>>this.http
       .get(picsUrl)
-      .map(res => this.extractData<Pic[]>(res))
+      .map(res => this.extractData<Media[]>(res))
       .catch(this.handleError)
       .finally(() => this.spinnerService.hide());
   }
 
   getShowImages() {
     this.spinnerService.show();
-    return <Observable<Pic>>this.http
+    return <Observable<Media>>this.http
       .get(imagesUrl)
-      .map(res => this.extractData<Pic>(res))
+      .map(res => this.extractData<Media>(res))
       .catch(this.handleError)
       .finally(() => this.spinnerService.hide());
   }
