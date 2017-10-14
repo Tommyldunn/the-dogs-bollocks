@@ -11,7 +11,7 @@
       <div class="column is-full">
         <h3>{{ p.venue }}</h3>
       </div>
-      <div class="column is-one-third-desktop" *ngFor="let i of p['images']">
+      <div *ngFor="let i of p['images']" [ngClass]="{'is-one-third-desktop': p.images.length > 2,'is-half-desktop': p.images.length === 2 }" class="column">
         <img class="image" [src]="i.url" alt="{{ i.url }}" />
       </div>
     </div>

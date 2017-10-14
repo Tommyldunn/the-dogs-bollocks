@@ -74,6 +74,13 @@ export class InMemoryDataService implements InMemoryDbService {
           { 'url': 'assets/images/tinified/db-7.jpg' },
           { 'url': 'assets/images/tinified/db-8.jpg' },
         ]
+      }, {
+        'id': 2,
+        'venue': 'arlenes grocery',
+        'images': [
+          { 'url': 'assets/images/arlenesgrocery1.jpg' },
+          { 'url': 'assets/images/arlenesgrocery2.jpg' }
+        ]
       }
     ];
     return { shows, members, pictures };
