@@ -12,12 +12,14 @@ import { AgmCoreModule } from '@agm/core';
 
 import { ShowService } from './_services/show.service';
 import { MemberService } from './_services/member.service';
+import { PicService } from './_services/pic.service';
 
 import { SiteRootComponent } from './site-root.component';
 import { SiteHomeComponent } from './site-home/site-home.component';
 import { SiteAboutComponent } from './site-about/site-about.component';
 import { SiteShowsComponent } from './site-shows/site-shows.component';
 import { SiteMembersComponent } from './site-members/site-members.component';
+import { SiteMediaComponent } from './site-media/site-media.component';
 
 @NgModule({
   imports: [
@@ -34,9 +36,10 @@ import { SiteMembersComponent } from './site-members/site-members.component';
     SiteHomeComponent,
     SiteAboutComponent,
     SiteShowsComponent,
-    SiteMembersComponent
+    SiteMembersComponent,
+    SiteMediaComponent
   ],
-  providers: [ShowService, MemberService],
+  providers: [ShowService, MemberService, PicService],
   bootstrap: [SiteRootComponent]
 })
 export class AppModule { }

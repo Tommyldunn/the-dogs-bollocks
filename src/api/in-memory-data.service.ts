@@ -60,6 +60,20 @@ export class InMemoryDataService {
         bio: 'Born in Edam, the cheese-capital of the Netherlands. He\'\s the guy in the back with the guitar, occasionally busting out a solo but mostly thinking about turtle things.'
       }
     ];
-    return { shows, members };
+    const pics = [
+      {
+        'images': [
+          { 'url': 'assets/images/db-1.jpg' },
+          { 'url': 'assets/images/db-2.jpg' },
+          { 'url': 'assets/images/db-3.jpg' },
+          { 'url': 'assets/images/andy-show.jpg' },
+          { 'url': 'assets/images/db-5.jpg' },
+          { 'url': 'assets/images/db-6.jpg' },
+          { 'url': 'assets/images/db-7.jpg' },
+          { 'url': 'assets/images/db-8.jpg' },
+        ]
+      }
+    ];
+    return { shows, members, pics };
   }
 }

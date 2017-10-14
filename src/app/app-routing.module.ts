@@ -6,6 +6,7 @@ import { SiteHomeComponent } from './site-home/site-home.component';
 import { SiteAboutComponent } from './site-about/site-about.component';
 import { SiteShowsComponent } from './site-shows/site-shows.component';
 import { SiteMembersComponent } from './site-members/site-members.component';
+import { SiteMediaComponent } from './site-media/site-media.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'about', component: SiteAboutComponent },
   { path: 'upcoming-shows', component: SiteShowsComponent },
   { path: 'bios', component: SiteMembersComponent },
+  { path: 'media', component: SiteMediaComponent },
 ];
 
 @NgModule({
