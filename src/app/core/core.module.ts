@@ -6,6 +6,7 @@ import { SpinnerModule } from './site-spinner/site-spinner.module';
 
 import { SiteHeaderComponent } from './site-header/site-header.component';
 import { SiteSidebarComponent } from './site-sidebar/site-sidebar.component';
+import { SiteFooterComponent } from './site-footer/site-footer.component';
 
 @NgModule({
   imports: [
@@ -16,12 +17,14 @@ import { SiteSidebarComponent } from './site-sidebar/site-sidebar.component';
   ],
   declarations: [
     SiteHeaderComponent,
-    SiteSidebarComponent
+    SiteSidebarComponent,
+    SiteFooterComponent
   ],
   exports: [
     SpinnerModule,
     SiteHeaderComponent,
-    SiteSidebarComponent
+    SiteSidebarComponent,
+    SiteFooterComponent
   ]
 })
 export class CoreModule { }

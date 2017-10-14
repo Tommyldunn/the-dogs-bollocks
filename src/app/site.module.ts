@@ -32,7 +32,7 @@ import { SiteComponent } from './site.component';
     SiteShowsModule,
     SiteMembersModule,
     SiteMediaModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 })
+    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 })
   ],
   declarations: [
     SiteComponent
