@@ -21,51 +21,6 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, .2) !default;
   @include control;
   justify-content: center;
 
-  strong {
-    color: inherit;
-  }
-
-  .icon {
-    &,
-    &.is-small,
-    &.is-medium,
-    &.is-large {
-      width: 1.5em;
-      height: 1.5em;
-    }
-
-    &:first-child:not(:last-child) {
-      margin-right: .1875em;
-      margin-left: calc(-.375em - 1px);
-    }
-
-    &:last-child:not(:first-child) {
-      margin-right: calc(-.375em - 1px);
-      margin-left: .1875em;
-    }
-
-    &:first-child:last-child {
-      margin-right: calc(-.375em - 1px);
-      margin-left: calc(-.375em - 1px);
-    }
-  }
-
-  // States
-  &:hover,
-  &.is-hovered {
-    //
-  }
-
-  &:focus,
-  &.is-focused {
-    //
-  }
-
-  &:active,
-  &.is-active {
-    //
-  }
-
   // Colors
   &.is-link {
     color: $red;
