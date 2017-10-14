@@ -18,7 +18,7 @@ import { ShowService } from './_services/show.service';
 import { MemberService } from './_services/member.service';
 import { PicService } from './_services/pic.service';
 
-import { SiteRootComponent } from './site-root.component';
+import { SiteComponent } from './site.component';
 
 @NgModule({
   imports: [
@@ -35,9 +35,9 @@ import { SiteRootComponent } from './site-root.component';
     InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 })
   ],
   declarations: [
-    SiteRootComponent
+    SiteComponent
   ],
   providers: [ShowService, MemberService, PicService],
-  bootstrap: [SiteRootComponent]
+  bootstrap: [SiteComponent]
 })
-export class AppModule { }
+export class SiteModule { }

@@ -1,14 +1,16 @@
 import { Component, ElementRef } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd, NavigationCancel,
-  NavigationError, NavigationStart, RoutesRecognized, Event } from '@angular/router';
+import {
+  Router, ActivatedRoute, NavigationEnd, NavigationCancel,
+  NavigationError, NavigationStart, RoutesRecognized, Event
+} from '@angular/router';
 import { Location } from '@angular/common';
 import { SpinnerService } from './core/site-spinner/site-spinner.service';
 
 @Component({
   selector: 'site-root',
-  templateUrl: './site-root.component.html'
+  templateUrl: './site.component.html'
 })
-export class SiteRootComponent {
+export class SiteComponent {
   public menuOpen: boolean;
 
   private classes: Array<string> = [];

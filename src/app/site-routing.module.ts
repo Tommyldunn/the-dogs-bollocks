@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { SiteRootComponent } from './site-root.component';
-import { SiteMediaComponent } from './site-media/site-media.component';
+import { SiteComponent } from './site.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -11,7 +10,6 @@ const routes: Routes = [
   { loadChildren: 'app/site-shows/site-shows.module#SiteShowsModule', path: 'upcoming-shows' },
   { loadChildren: 'app/site-members/site-members.module#SiteMembersModule', path: 'bios' },
   { loadChildren: 'app/site-media/site-media.module#SiteMediaModule', path: 'media' },
-  // { path: 'media', component: SiteMediaComponent },
 ];
 
 @NgModule({
