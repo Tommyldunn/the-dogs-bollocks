@@ -44,58 +44,6 @@
   }
 }
 
-// Components
-
-.hero-video {
-  overflow: hidden;
-
-  @include overlay;
-  // Responsiveness
-  @include mobile {
-    display: none;
-  }
-
-  video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate3d(-50%, -50%, 0);
-  }
-
-  // Modifiers
-  &.is-transparent {
-    opacity: .3;
-  }
-}
-
-.hero-buttons {
-  margin-top: 1.5rem;
-  // Responsiveness
-
-  @include mobile {
-    .button {
-      display: flex;
-
-      &:not(:last-child) {
-        margin-bottom: .75rem;
-      }
-    }
-  }
-  @include tablet {
-    display: flex;
-
-    justify-content: center;
-
-    .button:not(:last-child) {
-      margin-right: 1.5rem;
-    }
-  }
-}
-
-// Containers
-
 .hero-head,
 .hero-foot {
   flex-grow: 0;
@@ -108,15 +56,11 @@
   padding: 3rem 1.5rem;
 
   flex-shrink: 0;
-  // Responsiveness
   @include from($widescreen) {
     padding-right: 0;
     padding-left: 0;
   }
 }
-
-// Main container
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -125,142 +69,12 @@
   align-items: stretch;
   justify-content: space-between;
 
-  .nav {
-    background: none;
-    box-shadow: 0 1px 0 rgba($border, .3);
-  }
-
   .tabs {
     ul {
       border-bottom: none;
     }
   }
 
-  // Colors
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
-
-    &.is-#{$name} {
-      color: $color-invert;
-      background-color: $color;
-      // Modifiers
-      // &.is-bold {
-      //   $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%);
-      //   $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%);
-      //
-      //   background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%);
-      //
-      //   @include mobile {
-      //     .nav-menu {
-      //       background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%);
-      //     }
-      //   }
-      // }
-      // Responsiveness
-
-      @include mobile {
-        .nav-toggle {
-          span {
-            background-color: $color-invert;
-          }
-
-          &:hover {
-            background-color: rgba($black, .1);
-          }
-
-          &.is-active {
-            span {
-              background-color: $color-invert;
-            }
-          }
-        }
-
-        .nav-menu {
-          .nav-item {
-            border-top-color: rgba($color-invert, .2);
-          }
-        }
-      }
-
-      a:not(.button),
-      strong {
-        color: inherit;
-      }
-
-      .title {
-        color: $color-invert;
-      }
-
-      .subtitle {
-        color: rgba($color-invert, .9);
-
-        a:not(.button),
-        strong {
-          color: $color-invert;
-        }
-      }
-
-      .nav {
-        box-shadow: 0 1px 0 rgba($color-invert, .2);
-      }
-
-      .nav-menu {
-        @include mobile {
-          background-color: $color;
-        }
-      }
-
-      a.nav-item,
-      .nav-item a:not(.button) {
-        color: rgba($color-invert, .7);
-
-        &:hover,
-        &.is-active {
-          color: $color-invert;
-        }
-      }
-
-      .tabs {
-        a {
-          color: $color-invert;
-          opacity: .9;
-
-          &:hover {
-            opacity: 1;
-          }
-        }
-
-        li {
-          &.is-active a {
-            opacity: 1;
-          }
-        }
-
-        &.is-boxed,
-        &.is-toggle {
-          a {
-            color: $color-invert;
-
-            &:hover {
-              background-color: rgba($black, .1);
-            }
-          }
-
-          li.is-active a {
-            &,
-            &:hover {
-              color: $color;
-              background-color: $color-invert;
-              border-color: $color-invert;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // Sizes
   &.is-medium {
     @include tablet {
       .hero-body {
@@ -298,10 +112,8 @@
 .section {
   padding: 3rem 1.5rem;
   background-color: $white;
-  // Responsiveness
 
   @include desktop {
-    // Sizes
     &.is-medium {
       padding: 9rem 1.5rem;
     }

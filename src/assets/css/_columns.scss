@@ -2,74 +2,9 @@
   display: block;
   flex-basis: 0;
   flex-grow: 1;
+  padding: .75rem;
+
   flex-shrink: 1;
-  padding: 0.75rem;
-
-  .columns.is-mobile > &.is-narrow {
-    flex: none;
-  }
-
-  .columns.is-mobile > &.is-full {
-    flex: none;
-    width: 100%;
-  }
-
-  .columns.is-mobile > &.is-three-quarters {
-    flex: none;
-    width: 75%;
-  }
-
-  .columns.is-mobile > &.is-two-thirds {
-    flex: none;
-    width: 66.6666%;
-  }
-
-  .columns.is-mobile > &.is-half {
-    flex: none;
-    width: 50%;
-  }
-
-  .columns.is-mobile > &.is-one-third {
-    flex: none;
-    width: 33.3333%;
-  }
-
-  .columns.is-mobile > &.is-one-quarter {
-    flex: none;
-    width: 25%;
-  }
-
-  .columns.is-mobile > &.is-offset-three-quarters {
-    margin-left: 75%;
-  }
-
-  .columns.is-mobile > &.is-offset-two-thirds {
-    margin-left: 66.6666%;
-  }
-
-  .columns.is-mobile > &.is-offset-half {
-    margin-left: 50%;
-  }
-
-  .columns.is-mobile > &.is-offset-one-third {
-    margin-left: 33.3333%;
-  }
-
-  .columns.is-mobile > &.is-offset-one-quarter {
-    margin-left: 25%;
-  }
-
-  @for $i from 1 through 12 {
-    .columns.is-mobile > &.is-#{$i} {
-      flex: none;
-      width: $i / 12 * 100%;
-    }
-
-    .columns.is-mobile > &.is-offset-#{$i} {
-      margin-left: $i / 12 * 100%;
-    }
-  }
-
   @include mobile {
     &.is-narrow-mobile {
       flex: none;
@@ -136,8 +71,6 @@
       }
     }
   }
-
-
   @include tablet {
     &.is-narrow,
     &.is-narrow-tablet {
@@ -218,8 +151,6 @@
       }
     }
   }
-
-
   @include desktop {
     &.is-narrow-desktop {
       flex: none;
@@ -286,8 +217,6 @@
       }
     }
   }
-
-
   @include widescreen {
     &.is-narrow-widescreen {
       flex: none;
@@ -354,30 +283,104 @@
       }
     }
   }
+
+  .columns.is-mobile > &.is-narrow {
+    flex: none;
+  }
+
+  .columns.is-mobile > &.is-full {
+    flex: none;
+    width: 100%;
+  }
+
+  .columns.is-mobile > &.is-three-quarters {
+    flex: none;
+    width: 75%;
+  }
+
+  .columns.is-mobile > &.is-two-thirds {
+    flex: none;
+    width: 66.6666%;
+  }
+
+  .columns.is-mobile > &.is-half {
+    flex: none;
+    width: 50%;
+  }
+
+  .columns.is-mobile > &.is-one-third {
+    flex: none;
+    width: 33.3333%;
+  }
+
+  .columns.is-mobile > &.is-one-quarter {
+    flex: none;
+    width: 25%;
+  }
+
+  .columns.is-mobile > &.is-offset-three-quarters {
+    margin-left: 75%;
+  }
+
+  .columns.is-mobile > &.is-offset-two-thirds {
+    margin-left: 66.6666%;
+  }
+
+  .columns.is-mobile > &.is-offset-half {
+    margin-left: 50%;
+  }
+
+  .columns.is-mobile > &.is-offset-one-third {
+    margin-left: 33.3333%;
+  }
+
+  .columns.is-mobile > &.is-offset-one-quarter {
+    margin-left: 25%;
+  }
+
+  @for $i from 1 through 12 {
+    .columns.is-mobile > &.is-#{$i} {
+      flex: none;
+      width: $i / 12 * 100%;
+    }
+
+    .columns.is-mobile > &.is-offset-#{$i} {
+      margin-left: $i / 12 * 100%;
+    }
+  }
 }
 
 .columns {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-  margin-top: -0.75rem;
+  margin-top: -.75rem;
+  margin-right: -.75rem;
+  margin-left: -.75rem;
+
+  @include tablet {
+    &:not(.is-desktop) {
+      display: flex;
+    }
+  }
+  @include desktop {
+    &.is-desktop {
+      display: flex;
+    }
+  }
 
   &:last-child {
-    margin-bottom: -0.75rem;
+    margin-bottom: -.75rem;
   }
 
   &:not(:last-child) {
-    margin-bottom: 0.75rem;
+    margin-bottom: .75rem;
   }
-
-  // Modifiers
   &.is-centered {
     justify-content: center;
   }
 
   &.is-gapless {
-    margin-left: 0;
-    margin-right: 0;
     margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
 
     &:last-child {
       margin-bottom: 0;
@@ -388,20 +391,19 @@
     }
 
     & > .column {
-      margin: 0;
       padding: 0;
+      margin: 0;
     }
   }
 
   &.is-grid {
-    // Responsiveness
     @include tablet {
       flex-wrap: wrap;
 
       & > .column {
-        max-width: 33.3333%;
-        padding: 0.75rem;
         width: 33.3333%;
+        max-width: 33.3333%;
+        padding: .75rem;
 
         & + .column {
           margin-left: 0;
@@ -420,20 +422,5 @@
 
   &.is-vcentered {
     align-items: center;
-  }
-
-  // Responsiveness
-  @include tablet {
-    &:not(.is-desktop) {
-      display: flex;
-    }
-  }
-
-
-  @include desktop {
-    // Modifiers
-    &.is-desktop {
-      display: flex;
-    }
   }
 }

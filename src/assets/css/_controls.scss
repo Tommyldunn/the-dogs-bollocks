@@ -11,7 +11,6 @@ $control-padding-horizontal: calc(.625em - 1px) !default;
   padding-right: $control-padding-horizontal;
   padding-bottom: $control-padding-vertical;
   padding-left: $control-padding-horizontal;
-  font-size: $size-normal;
   line-height: 1.5;
   vertical-align: top;
   border: 1px solid transparent;
@@ -34,18 +33,4 @@ $control-padding-horizontal: calc(.625em - 1px) !default;
   &[disabled] {
     cursor: not-allowed;
   }
-}
-
-// The controls sizes use mixins so they can be used at different breakpoints
-@mixin control-small {
-  font-size: $size-small;
-  border-radius: $control-radius-small;
-}
-
-@mixin control-medium {
-  font-size: $size-medium;
-}
-
-@mixin control-large {
-  font-size: $size-large;
 }

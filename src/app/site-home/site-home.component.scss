@@ -1,15 +1,14 @@
 .upcoming-dates {
-  background-color: #2a2b2a;
+  background-color: #333;
   .container {
     justify-content: center;
-    h5 {
+    h3 {
       color: #fff;
     }
   }
-  .box {
-    h6 {
-      color: #2a2b2a;
-    }
+  h4,p {
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .is-full {
     .button {
@@ -22,17 +21,18 @@
 }
 
 svg {
+  display: inline-block;
   width: 100px;
   height: 100px;
   margin: 20px;
-  display: inline-block;
 }
 
 .loading {
   display: flex;
+  width: 100%;
+
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 @keyframes fadein {

@@ -6,8 +6,9 @@ import { MemberService } from '../_services/member.service';
 @Component({
   selector: 'site-site-members',
   templateUrl: './site-members.component.html',
-  styles: [` .card p { padding-bottom: 0;} .image.is-4by3 { padding-top: 2.5em;}.image.is-4by3 img { position: relative;}
-            p.title { color:  hsl(348, 100%, 61%); font-weight: 300;} a.icon { margin-top: .5em;}`]
+  styles: [` h2 { color: #ef4e7b; } .card p { padding-bottom: 0; margin-top: 0; margin-bottom: 0;}
+    .image.is-4by3 { padding-top: 2.5em;}.image.is-4by3 img { position: relative;}
+            p.title { color:  #ef4e7b; font-weight: bold;} a.icon { margin-top: .5em;}`]
 })
 export class SiteMembersComponent implements OnInit {
   members: Member[] = [];

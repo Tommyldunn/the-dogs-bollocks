@@ -1,43 +1,24 @@
-$button: $grey-darker !default;
-$button-background: $white !default;
-$button-border: $grey-lighter !default;
+
 $button-hover: $link-hover !default;
-$button-hover-border: $link-hover-border !default;
-$button-focus: $link-focus !default;
-$button-focus-border: $link-focus-border !default;
-$button-active: $link-active !default;
-$button-active-border: $link-active-border !default;
-$button-static: $grey !default;
-$button-static-background: $white-ter !default;
-$button-static-border: $grey-lighter !default;
+$button-hover-border: $link-hover !default;
+$button-focus: $link-hover !default;
+$button-focus-border: $link-hover !default;
+$button-active: $link-hover !default;
+$button-active-border: $link-hover !default;
 $button-shadow-inset: inset 0 1px 2px rgba($black, .2) !default;
 
-// The button sizes use mixins so they can be used at different breakpoints
-@mixin button-small {
-  font-size: $size-small;
-  border-radius: $radius-small;
-}
-
-@mixin button-medium {
-  font-size: $size-medium;
-}
-
-@mixin button-large {
-  font-size: $size-large;
-}
 
 .button {
   padding-right: .75em;
   padding-left: .75em;
-  color: $button;
+  color: $white;
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
-  background-color: $button-background;
-  border-color: $button-border;
+  background-color: $red;
+  border-color: $red;
 
   @include control;
-  @include unselectable;
   justify-content: center;
 
   strong {
@@ -72,27 +53,22 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, .2) !default;
   // States
   &:hover,
   &.is-hovered {
-    color: $button-hover;
-    border-color: $button-hover-border;
+    //
   }
 
   &:focus,
   &.is-focused {
-    color: $button-focus;
-    border-color: $button-focus-border;
-    box-shadow: 0 0 .5em rgba($button-focus-border, .25);
+    //
   }
 
   &:active,
   &.is-active {
-    color: $button-active;
-    border-color: $button-active-border;
-    box-shadow: $button-shadow-inset;
+    //
   }
 
   // Colors
   &.is-link {
-    color: $text;
+    color: $red;
     text-decoration: underline;
     background-color: transparent;
     border-color: transparent;
@@ -103,8 +79,7 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, .2) !default;
     &.is-focused,
     &:active,
     &.is-active {
-      color: $text-strong;
-      background-color: $background;
+      //
     }
 
     &[disabled] {
@@ -114,129 +89,8 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, .2) !default;
     }
   }
 
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
-
-    &.is-#{$name} {
-      color: $color-invert;
-      background-color: $color;
-      border-color: transparent;
-
-      &:hover,
-      &.is-hovered {
-        color: $color-invert;
-        background-color: darken($color, 2.5%);
-        border-color: transparent;
-      }
-
-      &:focus,
-      &.is-focused {
-        color: $color-invert;
-        border-color: transparent;
-        box-shadow: 0 0 .5em rgba($color, .25);
-      }
-
-      &:active,
-      &.is-active {
-        color: $color-invert;
-        background-color: darken($color, 5%);
-        border-color: transparent;
-        box-shadow: $button-shadow-inset;
-      }
-
-      &[disabled] {
-        background-color: $color;
-        border-color: transparent;
-        box-shadow: none;
-      }
-
-      &.is-inverted {
-        color: $color;
-        background-color: $color-invert;
-
-        &:hover {
-          background-color: darken($color-invert, 5%);
-        }
-
-        &[disabled] {
-          color: $color;
-          background-color: $color-invert;
-          border-color: transparent;
-          box-shadow: none;
-        }
-      }
-
-      &.is-loading {
-        &:after {
-          border-color: transparent transparent $color-invert $color-invert !important;
-        }
-      }
-
-      &.is-outlined {
-        color: $color;
-        background-color: transparent;
-        border-color: $color;
-
-        &:hover,
-        &:focus {
-          color: $color-invert;
-          background-color: $color;
-          border-color: $color;
-        }
-
-        &.is-loading {
-          &:after {
-            border-color: transparent transparent $color $color !important;
-          }
-        }
-
-        &[disabled] {
-          color: $color;
-          background-color: transparent;
-          border-color: $color;
-          box-shadow: none;
-        }
-      }
-
-      &.is-inverted.is-outlined {
-        color: $color-invert;
-        background-color: transparent;
-        border-color: $color-invert;
-
-        &:hover,
-        &:focus {
-          color: $color;
-          background-color: $color-invert;
-        }
-
-        &[disabled] {
-          color: $color-invert;
-          background-color: transparent;
-          border-color: $color-invert;
-          box-shadow: none;
-        }
-      }
-    }
-  }
-
-  // Sizes
-  &.is-small {
-    @include button-small;
-  }
-
-  &.is-medium {
-    @include button-medium;
-  }
-
-  &.is-large {
-    @include button-large;
-  }
-
   // Modifiers
   &[disabled] {
-    background-color: $button-background;
-    border-color: $button-border;
     box-shadow: none;
     opacity: .5;
   }
@@ -257,17 +111,8 @@ $button-shadow-inset: inset 0 1px 2px rgba($black, .2) !default;
       @include center(1em);
     }
   }
-
-  &.is-static {
-    color: $button-static;
-    pointer-events: none;
-    background-color: $button-static-background;
-    border-color: $button-static-border;
-    box-shadow: none;
-  }
 }
 
-// Adjustment for vertical spacing
 button.button,
 input[type="submit"].button {
   padding-top: .35em;

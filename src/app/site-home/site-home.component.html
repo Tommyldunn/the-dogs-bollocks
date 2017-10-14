@@ -11,11 +11,11 @@
     <div class="container">
       <div class="columns is-multiline">
         <div class="column is-full">
-          <h5>some upcoming shows</h5>
+          <h3>some upcoming shows</h3>
         </div>
         <div class="column show-item" *ngFor="let s of shows; let i = index;">
           <div class="box">
-            <h6 class="">{{ s.date}}</h6>
+            <h4 class="">{{ s.date}}</h4>
             <a class="link" [href]="s.venueLink" target="_blank">{{ s.venueName }}</a>
             <p class="subtitle">{{ s.venueAddress }}</p>
           </div>
