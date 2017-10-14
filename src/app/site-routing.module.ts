@@ -10,7 +10,7 @@ import { SiteMediaComponent } from './site-media/site-media.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: SiteHomeComponent },
+  { loadChildren: 'app/site-home/site-home.module#SiteHomeModule', path: 'home' },
   { path: 'about', component: SiteAboutComponent },
   { path: 'upcoming-shows', component: SiteShowsComponent },
   { path: 'bios', component: SiteMembersComponent },
@@ -21,4 +21,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class SiteRoutingModule { }
