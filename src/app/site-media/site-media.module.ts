@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SiteMediaRoutingModule } from './site-media-routing.module';
 
-import { MediaService } from '../_services/media.service';
+import { PictureService } from '../_services/picture.service';
 
 import { SiteMediaComponent } from './site-media.component';
 
@@ -15,7 +15,7 @@ import { SiteMediaComponent } from './site-media.component';
   declarations: [
     SiteMediaComponent
   ],
-  providers: [MediaService],
+  providers: [PictureService],
   exports: [
     SiteMediaComponent,
   ]
