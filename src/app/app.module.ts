@@ -11,6 +11,7 @@ import { CoreModule } from './core/core.module';
 import { SiteHomeModule } from './site-home/site-home.module';
 import { SiteAboutModule } from './site-about/site-about.module';
 import { SiteShowsModule } from './site-shows/site-shows.module';
+import { SiteMembersModule } from './site-members/site-members.module';
 
 import { ShowService } from './_services/show.service';
 import { MemberService } from './_services/member.service';
@@ -18,7 +19,6 @@ import { PicService } from './_services/pic.service';
 
 import { SiteRootComponent } from './site-root.component';
 
-import { SiteMembersComponent } from './site-members/site-members.component';
 import { SiteMediaComponent } from './site-media/site-media.component';
 
 @NgModule({
@@ -31,11 +31,11 @@ import { SiteMediaComponent } from './site-media/site-media.component';
     SiteHomeModule,
     SiteAboutModule,
     SiteShowsModule,
+    SiteMembersModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 })
   ],
   declarations: [
     SiteRootComponent,
-    SiteMembersComponent,
     SiteMediaComponent
   ],
   providers: [ShowService, MemberService, PicService],
