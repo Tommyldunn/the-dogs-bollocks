@@ -10,7 +10,8 @@ const routes: Routes = [
   { loadChildren: 'app/site-about/site-about.module#SiteAboutModule', path: 'about' },
   { loadChildren: 'app/site-shows/site-shows.module#SiteShowsModule', path: 'upcoming-shows' },
   { loadChildren: 'app/site-members/site-members.module#SiteMembersModule', path: 'bios' },
-  { path: 'media', component: SiteMediaComponent },
+  { loadChildren: 'app/site-media/site-media.module#SiteMediaModule', path: 'media' },
+  // { path: 'media', component: SiteMediaComponent },
 ];
 
 @NgModule({
